@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4099A51E1C90ABE900F58A54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A51D1C90ABE900F58A54 /* main.m */; };
+		4099A5211C90ABE900F58A54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5201C90ABE900F58A54 /* AppDelegate.m */; };
+		4099A5241C90ABE900F58A54 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5231C90ABE900F58A54 /* MainViewController.m */; };
+		4099A5271C90ABEA00F58A54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4099A5251C90ABEA00F58A54 /* Main.storyboard */; };
+		4099A5291C90ABEA00F58A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4099A5281C90ABEA00F58A54 /* Assets.xcassets */; };
+		4099A52C1C90ABEA00F58A54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4099A52A1C90ABEA00F58A54 /* LaunchScreen.storyboard */; };
+		4099A5371C90ABEA00F58A54 /* FarmDropTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5361C90ABEA00F58A54 /* FarmDropTestTests.m */; };
+		4099A5501C90AD5600F58A54 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A54D1C90AD5600F58A54 /* UIColor+HexString.m */; };
+		4099A5511C90AD5600F58A54 /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A54F1C90AD5600F58A54 /* NSObject+Extensions.m */; };
+		4099A5591C90ADDB00F58A54 /* FibonacciModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5581C90ADDB00F58A54 /* FibonacciModel.m */; };
+		4099A55E1C90B08500F58A54 /* MainViewControllerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A55D1C90B08500F58A54 /* MainViewControllerTableViewCell.m */; };
+		4099A5621C90B11700F58A54 /* MainViewControllerDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5611C90B11700F58A54 /* MainViewControllerDataSourceManager.m */; };
+		4099A5651C90B43A00F58A54 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5641C90B43A00F58A54 /* NSString+Extensions.m */; };
+		4099A5681C90B51400F58A54 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099A5671C90B51400F58A54 /* NSArray+Extensions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4099A5331C90ABEA00F58A54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4099A5111C90ABE900F58A54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4099A5181C90ABE900F58A54;
+			remoteInfo = FarmDropTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4099A5191C90ABE900F58A54 /* FarmDropTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmDropTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4099A51D1C90ABE900F58A54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FarmDropTest/main.m; sourceTree = "<group>"; };
+		4099A51F1C90ABE900F58A54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4099A5201C90ABE900F58A54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4099A5221C90ABE900F58A54 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4099A5231C90ABE900F58A54 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4099A5261C90ABEA00F58A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4099A5281C90ABEA00F58A54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FarmDropTest/Assets.xcassets; sourceTree = "<group>"; };
+		4099A52B1C90ABEA00F58A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4099A52D1C90ABEA00F58A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FarmDropTest/Info.plist; sourceTree = "<group>"; };
+		4099A5321C90ABEA00F58A54 /* FarmDropTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmDropTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4099A5361C90ABEA00F58A54 /* FarmDropTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarmDropTestTests.m; sourceTree = "<group>"; };
+		4099A5381C90ABEA00F58A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4099A5491C90ACFA00F58A54 /* FarmDropPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FarmDropPrefixHeader.pch; path = FarmDropTest/FarmDropPrefixHeader.pch; sourceTree = "<group>"; };
+		4099A54A1C90AD2600F58A54 /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
+		4099A54B1C90AD2600F58A54 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		4099A54C1C90AD5600F58A54 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		4099A54D1C90AD5600F58A54 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		4099A54E1C90AD5600F58A54 /* NSObject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extensions.h"; sourceTree = "<group>"; };
+		4099A54F1C90AD5600F58A54 /* NSObject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extensions.m"; sourceTree = "<group>"; };
+		4099A5571C90ADDB00F58A54 /* FibonacciModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FibonacciModel.h; sourceTree = "<group>"; };
+		4099A5581C90ADDB00F58A54 /* FibonacciModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciModel.m; sourceTree = "<group>"; };
+		4099A55C1C90B08500F58A54 /* MainViewControllerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerTableViewCell.h; sourceTree = "<group>"; };
+		4099A55D1C90B08500F58A54 /* MainViewControllerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTableViewCell.m; sourceTree = "<group>"; };
+		4099A5601C90B11700F58A54 /* MainViewControllerDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerDataSourceManager.h; sourceTree = "<group>"; };
+		4099A5611C90B11700F58A54 /* MainViewControllerDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerDataSourceManager.m; sourceTree = "<group>"; };
+		4099A5631C90B43A00F58A54 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		4099A5641C90B43A00F58A54 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		4099A5661C90B51400F58A54 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		4099A5671C90B51400F58A54 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		4099A5691C90CFA200F58A54 /* FibonacciProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FibonacciProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4099A5161C90ABE900F58A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4099A52F1C90ABEA00F58A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4099A5101C90ABE900F58A54 = {
+			isa = PBXGroup;
+			children = (
+				4099A51B1C90ABE900F58A54 /* FarmDropTest */,
+				4099A5351C90ABEA00F58A54 /* FarmDropTestTests */,
+				4099A5451C90AC8500F58A54 /* Other */,
+				4099A51A1C90ABE900F58A54 /* Products */,
+				4099A5461C90AC9900F58A54 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		4099A51A1C90ABE900F58A54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5191C90ABE900F58A54 /* FarmDropTest.app */,
+				4099A5321C90ABEA00F58A54 /* FarmDropTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4099A51B1C90ABE900F58A54 /* FarmDropTest */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5411C90AC6700F58A54 /* AppDelegate */,
+				4099A5421C90AC6E00F58A54 /* Common */,
+				4099A5441C90AC7C00F58A54 /* Configuration */,
+				4099A5431C90AC7300F58A54 /* VCs */,
+			);
+			path = FarmDropTest;
+			sourceTree = "<group>";
+		};
+		4099A5351C90ABEA00F58A54 /* FarmDropTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5361C90ABEA00F58A54 /* FarmDropTestTests.m */,
+				4099A5381C90ABEA00F58A54 /* Info.plist */,
+			);
+			path = FarmDropTestTests;
+			sourceTree = "<group>";
+		};
+		4099A5411C90AC6700F58A54 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4099A51F1C90ABE900F58A54 /* AppDelegate.h */,
+				4099A5201C90ABE900F58A54 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4099A5421C90AC6E00F58A54 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5521C90AD5900F58A54 /* Categories */,
+				4099A55F1C90B0FE00F58A54 /* DataSources */,
+				4099A5551C90AD7C00F58A54 /* Model */,
+				4099A5531C90AD7100F58A54 /* Protocols */,
+				4099A5561C90AD7F00F58A54 /* Services */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		4099A5431C90AC7300F58A54 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				4099A55B1C90B06400F58A54 /* MainView */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		4099A5441C90AC7C00F58A54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4099A54A1C90AD2600F58A54 /* Headers.h */,
+				4099A54B1C90AD2600F58A54 /* Networking.h */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		4099A5451C90AC8500F58A54 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5491C90ACFA00F58A54 /* FarmDropPrefixHeader.pch */,
+				4099A52D1C90ABEA00F58A54 /* Info.plist */,
+				4099A51D1C90ABE900F58A54 /* main.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4099A5461C90AC9900F58A54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5471C90ACA600F58A54 /* Fonts */,
+				4099A5481C90ACA900F58A54 /* Storyboard */,
+				4099A5281C90ABEA00F58A54 /* Assets.xcassets */,
+				4099A52A1C90ABEA00F58A54 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4099A5471C90ACA600F58A54 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		4099A5481C90ACA900F58A54 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5251C90ABEA00F58A54 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		4099A5521C90AD5900F58A54 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5661C90B51400F58A54 /* NSArray+Extensions.h */,
+				4099A5671C90B51400F58A54 /* NSArray+Extensions.m */,
+				4099A54E1C90AD5600F58A54 /* NSObject+Extensions.h */,
+				4099A54F1C90AD5600F58A54 /* NSObject+Extensions.m */,
+				4099A5631C90B43A00F58A54 /* NSString+Extensions.h */,
+				4099A5641C90B43A00F58A54 /* NSString+Extensions.m */,
+				4099A54C1C90AD5600F58A54 /* UIColor+HexString.h */,
+				4099A54D1C90AD5600F58A54 /* UIColor+HexString.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		4099A5531C90AD7100F58A54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5691C90CFA200F58A54 /* FibonacciProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		4099A5551C90AD7C00F58A54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4099A5571C90ADDB00F58A54 /* FibonacciModel.h */,
+				4099A5581C90ADDB00F58A54 /* FibonacciModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4099A5561C90AD7F00F58A54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4099A55A1C90B05F00F58A54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4099A55C1C90B08500F58A54 /* MainViewControllerTableViewCell.h */,
+				4099A55D1C90B08500F58A54 /* MainViewControllerTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4099A55B1C90B06400F58A54 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4099A55A1C90B05F00F58A54 /* Cells */,
+				4099A5221C90ABE900F58A54 /* MainViewController.h */,
+				4099A5231C90ABE900F58A54 /* MainViewController.m */,
+				4099A5601C90B11700F58A54 /* MainViewControllerDataSourceManager.h */,
+				4099A5611C90B11700F58A54 /* MainViewControllerDataSourceManager.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		4099A55F1C90B0FE00F58A54 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4099A5181C90ABE900F58A54 /* FarmDropTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4099A53B1C90ABEA00F58A54 /* Build configuration list for PBXNativeTarget "FarmDropTest" */;
+			buildPhases = (
+				4099A5151C90ABE900F58A54 /* Sources */,
+				4099A5161C90ABE900F58A54 /* Frameworks */,
+				4099A5171C90ABE900F58A54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FarmDropTest;
+			productName = FarmDropTest;
+			productReference = 4099A5191C90ABE900F58A54 /* FarmDropTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4099A5311C90ABEA00F58A54 /* FarmDropTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4099A53E1C90ABEA00F58A54 /* Build configuration list for PBXNativeTarget "FarmDropTestTests" */;
+			buildPhases = (
+				4099A52E1C90ABEA00F58A54 /* Sources */,
+				4099A52F1C90ABEA00F58A54 /* Frameworks */,
+				4099A5301C90ABEA00F58A54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4099A5341C90ABEA00F58A54 /* PBXTargetDependency */,
+			);
+			name = FarmDropTestTests;
+			productName = FarmDropTestTests;
+			productReference = 4099A5321C90ABEA00F58A54 /* FarmDropTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4099A5111C90ABE900F58A54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nuno Salvador";
+				TargetAttributes = {
+					4099A5181C90ABE900F58A54 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					4099A5311C90ABEA00F58A54 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 4099A5181C90ABE900F58A54;
+					};
+				};
+			};
+			buildConfigurationList = 4099A5141C90ABE900F58A54 /* Build configuration list for PBXProject "FarmDropTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4099A5101C90ABE900F58A54;
+			productRefGroup = 4099A51A1C90ABE900F58A54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4099A5181C90ABE900F58A54 /* FarmDropTest */,
+				4099A5311C90ABEA00F58A54 /* FarmDropTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4099A5171C90ABE900F58A54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4099A52C1C90ABEA00F58A54 /* LaunchScreen.storyboard in Resources */,
+				4099A5291C90ABEA00F58A54 /* Assets.xcassets in Resources */,
+				4099A5271C90ABEA00F58A54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4099A5301C90ABEA00F58A54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4099A5151C90ABE900F58A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4099A5591C90ADDB00F58A54 /* FibonacciModel.m in Sources */,
+				4099A5241C90ABE900F58A54 /* MainViewController.m in Sources */,
+				4099A5681C90B51400F58A54 /* NSArray+Extensions.m in Sources */,
+				4099A5621C90B11700F58A54 /* MainViewControllerDataSourceManager.m in Sources */,
+				4099A5651C90B43A00F58A54 /* NSString+Extensions.m in Sources */,
+				4099A5211C90ABE900F58A54 /* AppDelegate.m in Sources */,
+				4099A5501C90AD5600F58A54 /* UIColor+HexString.m in Sources */,
+				4099A55E1C90B08500F58A54 /* MainViewControllerTableViewCell.m in Sources */,
+				4099A51E1C90ABE900F58A54 /* main.m in Sources */,
+				4099A5511C90AD5600F58A54 /* NSObject+Extensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4099A52E1C90ABEA00F58A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4099A5371C90ABEA00F58A54 /* FarmDropTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4099A5341C90ABEA00F58A54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4099A5181C90ABE900F58A54 /* FarmDropTest */;
+			targetProxy = 4099A5331C90ABEA00F58A54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4099A5251C90ABEA00F58A54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4099A5261C90ABEA00F58A54 /* Base */,
+			);
+			name = Main.storyboard;
+			path = FarmDropTest;
+			sourceTree = "<group>";
+		};
+		4099A52A1C90ABEA00F58A54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4099A52B1C90ABEA00F58A54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = FarmDropTest;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4099A5391C90ABEA00F58A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4099A53A1C90ABEA00F58A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4099A53C1C90ABEA00F58A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/FarmDropPrefixHeader.pch";
+				INFOPLIST_FILE = FarmDropTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iruleonu.FarmDropTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4099A53D1C90ABEA00F58A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/FarmDropPrefixHeader.pch";
+				INFOPLIST_FILE = FarmDropTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iruleonu.FarmDropTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4099A53F1C90ABEA00F58A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FarmDropTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iruleonu.FarmDropTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmDropTest.app/FarmDropTest";
+			};
+			name = Debug;
+		};
+		4099A5401C90ABEA00F58A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FarmDropTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iruleonu.FarmDropTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmDropTest.app/FarmDropTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4099A5141C90ABE900F58A54 /* Build configuration list for PBXProject "FarmDropTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4099A5391C90ABEA00F58A54 /* Debug */,
+				4099A53A1C90ABEA00F58A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4099A53B1C90ABEA00F58A54 /* Build configuration list for PBXNativeTarget "FarmDropTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4099A53C1C90ABEA00F58A54 /* Debug */,
+				4099A53D1C90ABEA00F58A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4099A53E1C90ABEA00F58A54 /* Build configuration list for PBXNativeTarget "FarmDropTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4099A53F1C90ABEA00F58A54 /* Debug */,
+				4099A5401C90ABEA00F58A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4099A5111C90ABE900F58A54 /* Project object */;
+}

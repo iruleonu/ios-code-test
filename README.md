@@ -12,3 +12,8 @@ Please don't spend more than 3 hours on it, even if it's not working flawleslly.
 ## Submission
 
 Please fork this repository, write some code and update this README with any relevant detail.
+
+## Comments
+
+This project doesn't need any libraries. 
+Nuno Salvador
