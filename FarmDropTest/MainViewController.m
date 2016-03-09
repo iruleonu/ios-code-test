@@ -19,6 +19,7 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate, MainViewControllerDataSourceManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) MainViewControllerDataSourceManager *dataSourceManager;
 
 @end
@@ -29,9 +30,10 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
     [super viewDidLoad];
     
     self.dataSourceManager = [[MainViewControllerDataSourceManager alloc] initWithDelegate:self];
-    [self changeMaximunFibonacciNumberTo:ViewControllerDefaultMaximunFibbonaciNumber];
     
     [self setupUI];
+    
+    [self changeMaximunFibonacciNumberTo:ViewControllerDefaultMaximunFibbonaciNumber];
 }
 
 #pragma mark - Build UI
@@ -40,6 +42,7 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
     self.title = ViewControllerTitle;
     
     [self setupNavigationBar];
+    [self hideAndStopNetworkIndicator];
 }
 
 - (void)setupNavigationBar {
@@ -54,6 +57,16 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
 
 #pragma mark - Actions and selectors
 
+- (void)showAndStartNetworkIndicator {
+    [self.activityIndicatorView startAnimating];
+    self.activityIndicatorView.alpha = 1.0f;
+}
+
+- (void)hideAndStopNetworkIndicator {
+    [self.activityIndicatorView stopAnimating];
+    self.activityIndicatorView.alpha = 0.0f;
+}
+
 - (void)handleSettingsTap:(id)sender {
     __weak typeof(self) welf = self;
     
@@ -67,7 +80,10 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * _Nonnull action) {
                                                           UITextField *textField = [alertController.textFields firstObject];
-                                                          [welf changeMaximunFibonacciNumberTo:[textField.text longLongValue]];
+                                                          NSUInteger value = [textField.text longLongValue];
+                                                          if (value) {
+                                                              [welf changeMaximunFibonacciNumberTo:value];
+                                                          }
                                                       }]];
     
     [self presentViewController:alertController animated:YES completion:nil];
@@ -101,10 +117,22 @@ static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
 
 #pragma mark - Custom
 
+// Asynchronous method
 - (void)changeMaximunFibonacciNumberTo:(NSUInteger)maximum {
-    [self.dataSourceManager populateArrayWithFibNumbersFromOneToValue:maximum completionBlock:^(NSArray *items) {
-        [self.tableView reloadData];
-    }];
+    if (!maximum) {
+        return;
+    }
+    
+    [self showAndStartNetworkIndicator];
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        [self.dataSourceManager populateArrayWithFibNumbersFromOneToValue:maximum completionBlock:^(NSArray *items) {
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                [self hideAndStopNetworkIndicator];
+                [self.tableView reloadData];
+            });
+        }];
+    });
 }
 
 @end

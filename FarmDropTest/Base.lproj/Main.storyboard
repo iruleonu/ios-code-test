@@ -82,18 +82,24 @@
                                     <outlet property="delegate" destination="bgh-11-cpA" id="rLQ-8g-7Zy"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DYe-LJ-05Y">
+                                <rect key="frame" x="282" y="24" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kx8-fK-1sU" firstAttribute="top" secondItem="VBt-On-sST" secondAttribute="bottom" id="8U9-Sv-DHw"/>
                             <constraint firstItem="oW8-bb-x9D" firstAttribute="top" secondItem="Kx8-fK-1sU" secondAttribute="bottom" id="Al0-v3-y6B"/>
+                            <constraint firstItem="DYe-LJ-05Y" firstAttribute="centerX" secondItem="6cI-ud-Sgl" secondAttribute="centerX" id="Fq5-tp-PH9"/>
                             <constraint firstAttribute="trailing" secondItem="Kx8-fK-1sU" secondAttribute="trailing" id="Tu6-Kg-xmA"/>
                             <constraint firstItem="Kx8-fK-1sU" firstAttribute="leading" secondItem="6cI-ud-Sgl" secondAttribute="leading" id="ZY8-wT-zU2"/>
+                            <constraint firstItem="DYe-LJ-05Y" firstAttribute="top" secondItem="VBt-On-sST" secondAttribute="bottom" constant="24" id="bKx-eh-T0d"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="T0V-1X-vkO"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="DYe-LJ-05Y" id="EwO-1E-emp"/>
                         <outlet property="tableView" destination="Kx8-fK-1sU" id="wBX-NN-D2D"/>
                     </connections>
                 </viewController>
