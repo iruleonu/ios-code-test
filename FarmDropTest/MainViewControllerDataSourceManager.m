@@ -7,6 +7,7 @@
 //
 
 #import "MainViewControllerDataSourceManager.h"
+#import "FibonacciModel.h"
 
 @interface MainViewControllerDataSourceManager ()
 
@@ -43,8 +44,19 @@
     return self.items[indexPath.row];
 }
 
-- (void)populateArrayWithFibNumbersFromOneToValue:(NSUInteger)value {
-    // TODO: 
+- (void)populateArrayWithFibNumbersFromOneToValue:(NSUInteger)value completionBlock:(MainViewControllerDataSourceManagerPopulationCompletionBlock)completionBlock {
+    NSMutableArray *collection = [NSMutableArray arrayWithCapacity:value];
+    
+    for (int i=1; i<=value; i++) {
+        FibonacciModel *aux = [[FibonacciModel alloc] initWithNumber:i];
+        [collection addObject:aux];
+    }
+    
+    self.items = collection;
+    
+    if (completionBlock) {
+        completionBlock(collection);
+    }
 }
 
 @end

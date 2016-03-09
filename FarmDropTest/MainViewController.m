@@ -14,6 +14,7 @@
 static NSString * const ViewControllerTitle = @"Fibbonaci Numbers List";
 static NSString * const ViewControllerCellIdentifier = @"MainViewControllerCellIdentifier";
 static NSString * const ViewControllerResourceSettingsIcon = @"settings-icon";
+static const NSUInteger ViewControllerDefaultMaximunFibbonaciNumber = 7;
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate, MainViewControllerDataSourceManagerDelegate>
 
@@ -28,6 +29,7 @@ static NSString * const ViewControllerResourceSettingsIcon = @"settings-icon";
     [super viewDidLoad];
     
     self.dataSourceManager = [[MainViewControllerDataSourceManager alloc] initWithDelegate:self];
+    [self changeMaximunFibonacciNumberTo:ViewControllerDefaultMaximunFibbonaciNumber];
     
     [self setupUI];
 }
@@ -36,8 +38,6 @@ static NSString * const ViewControllerResourceSettingsIcon = @"settings-icon";
 
 - (void)setupUI {
     self.title = ViewControllerTitle;
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self setupNavigationBar];
 }
@@ -55,7 +55,22 @@ static NSString * const ViewControllerResourceSettingsIcon = @"settings-icon";
 #pragma mark - Actions and selectors
 
 - (void)handleSettingsTap:(id)sender {
-    // TODO:
+    __weak typeof(self) welf = self;
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Choose the maximun number value"
+                                                                             message:@"(from 1 to n)"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addTextFieldWithConfigurationHandler:nil];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil)
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * _Nonnull action) {
+                                                          UITextField *textField = [alertController.textFields firstObject];
+                                                          [welf changeMaximunFibonacciNumberTo:[textField.text longLongValue]];
+                                                      }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -75,8 +90,21 @@ static NSString * const ViewControllerResourceSettingsIcon = @"settings-icon";
 
 #pragma mark - UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    FibonacciModel *model = [self.dataSourceManager modelObjectAtIndexPath:indexPath];
+    [model fibonacciValue];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Custom
+
+- (void)changeMaximunFibonacciNumberTo:(NSUInteger)maximum {
+    [self.dataSourceManager populateArrayWithFibNumbersFromOneToValue:maximum completionBlock:^(NSArray *items) {
+        [self.tableView reloadData];
+    }];
 }
 
 @end

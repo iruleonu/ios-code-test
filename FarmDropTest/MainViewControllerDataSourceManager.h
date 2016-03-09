@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^MainViewControllerDataSourceManagerPopulationCompletionBlock)(NSArray *items);
+
+
 @protocol MainViewControllerDataSourceManagerDelegate <NSObject>
 
 // Empty protocol
@@ -21,6 +24,6 @@
 - (NSInteger)numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section;
 - (id)modelObjectAtIndexPath:(NSIndexPath *)indexPath;
-- (void)populateArrayWithFibNumbersFromOneToValue:(NSUInteger)value;
+- (void)populateArrayWithFibNumbersFromOneToValue:(NSUInteger)value completionBlock:(MainViewControllerDataSourceManagerPopulationCompletionBlock)completionBlock;
 
 @end

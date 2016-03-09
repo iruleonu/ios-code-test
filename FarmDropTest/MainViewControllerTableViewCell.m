@@ -19,7 +19,8 @@
 @implementation MainViewControllerTableViewCell
 
 - (void)updateWithModel:(FibonacciModel *)model {
-    //TODO: implement
+    self.number.text = [NSString stringWithFormat:@"Number: %ld", model.number];
+    self.fibValue.text = [NSString stringWithFormat:@"Fibonacci value: %ld", [model fibonacciValue]];
 }
 
 @end

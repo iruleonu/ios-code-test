@@ -8,12 +8,30 @@
 
 #import "FibonacciModel.h"
 
+@interface FibonacciModel ()
+
+@property (assign, readwrite) NSUInteger number;
+@property (nonatomic) NSUInteger cachedValue;
+
+@end
+
 @implementation FibonacciModel
+
+- (instancetype)initWithNumber:(NSUInteger)number {
+    if (self = [super init]) {
+        self.number = number;
+        self.cachedValue = [self fibonacciValue];
+    }
+    return self;
+}
 
 #pragma mark - FibonacciProtocol
 
 - (NSUInteger)fibonacciValue {
-    return [self fibonacciFormula:self.number];
+    if (!self.cachedValue) {
+        self.cachedValue = [self fibonacciFormula:self.number];
+    }
+    return self.cachedValue;
 }
 
 #pragma mark - Custom

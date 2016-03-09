@@ -11,6 +11,8 @@
 
 @interface FibonacciModel : NSObject <FibonacciProtocol>
 
-@property (assign) NSUInteger number;
+- (instancetype)initWithNumber:(NSUInteger)number;
+
+@property (assign, readonly) NSUInteger number;
 
 @end
